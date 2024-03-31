@@ -1,5 +1,5 @@
 # rhis-builder-awslz
-The code in this project bootstraps a RHIS Landing zone in AWS
+The code in this repo bootstraps a RHIS Landing zone in AWS
 
 
 ## References:

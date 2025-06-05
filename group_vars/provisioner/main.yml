@@ -1,0 +1,22 @@
+---
+
+# This file contains the main variables for bootstrapping the aws landing zone
+
+aws_dns_zone: 'a-route53-zone-you-own.com'
+
+# This will be used when performing initalization
+# Allow rhisbuilder to interact with route53
+aws_manage_public_dns: true
+
+## When these two variables are set, it skips the imagebuilder and uses the
+## AMI you provide with this variable instead. This is useful if you have
+## already built an AMI and do not want to rebuild it every time
+
+imagebuilder_skip_build: false
+imagebuilder_ami: 'a valid AMI'
+
+## We strongly recommend to not split up an AWS image with filesystem elements
+## but it is possible. (This has to do with how AWS images use cloud-init and how they interact with LVM)
+## It will be necessary for CIS2, DISA-STIG and other builds
+imagebuilder_image_type: 'aws'
+imagebuilder_include_filesystem: false
